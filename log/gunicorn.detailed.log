@@ -1,0 +1,97 @@
+[2023-09-18 18:05:18,616] ERROR log_exception() L1414 Exception on /produtos [GET] - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\flask\app.py L1414
+Traceback (most recent call last):
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\engine\base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\engine\default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column produto.pk_produto does not exist
+LINE 1: SELECT produto.pk_produto AS produto_pk_produto, produto.cod...
+               ^
+HINT:  Perhaps you meant to reference the column "produto.produto".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\flask_openapi3\scaffold.py", line 127, in view_func
+    response = func(**func_kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\app.py", line 75, in get_produtos
+    produtos = session.query(Produto).all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\orm\query.py", line 2688, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\orm\query.py", line 2842, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\orm\session.py", line 2262, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\orm\session.py", line 2144, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\engine\base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\engine\base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\engine\base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\engine\base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\engine\base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\sqlalchemy\engine\default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column produto.pk_produto does not exist
+LINE 1: SELECT produto.pk_produto AS produto_pk_produto, produto.cod...
+               ^
+HINT:  Perhaps you meant to reference the column "produto.produto".
+
+[SQL: SELECT produto.pk_produto AS produto_pk_produto, produto.codigo AS produto_codigo, produto.produto AS produto_produto, produto.valor AS produto_valor, produto.ingredientes AS produto_ingredientes 
+FROM produto]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2023-09-18 18:05:18,679] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 18:05:18] "[35m[1mGET /produtos HTTP/1.1[0m" 500 - - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 18:08:13,211] INFO _log() L187  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.15.5:5000 - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 18:08:13,212] INFO _log() L187  [33mPress CTRL+C to quit[0m - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 18:08:17,094] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 18:08:17] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 18:08:17,400] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 18:08:17] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 18:08:17,445] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 18:08:17] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 18:08:17,450] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 18:08:17] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 18:08:18,738] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 18:08:18] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 18:08:18,762] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 18:08:18] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 18:08:25,079] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 18:08:25] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 18:12:54,382] INFO _log() L187  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.15.5:5000 - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 18:12:54,383] INFO _log() L187  [33mPress CTRL+C to quit[0m - call_trace=C:\Users\Consultor\Documents\personal\sukao_rani\sukao_api\sukaoenv\Lib\site-packages\werkzeug\_internal.py L187 

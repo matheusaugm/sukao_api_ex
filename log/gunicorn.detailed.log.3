@@ -1,0 +1,100 @@
+[2023-09-18 16:28:25,841] ERROR log_exception() L1414 Exception on /produto [GET] - call_trace=C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py L1414
+Traceback (most recent call last):
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask_openapi3\scaffold.py", line 127, in view_func
+    response = func(**func_kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\app.py", line 94, in get_produto
+    produto_id = query.id
+                 ^^^^^^^^
+AttributeError: 'ProdutoBuscaSchema' object has no attribute 'id'
+[2023-09-18 16:28:25,852] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 16:28:25] "[35m[1mGET /produto?produto=Teste HTTP/1.1[0m" 500 - - call_trace=C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 16:28:26,430] ERROR log_exception() L1414 Exception on /produto [GET] - call_trace=C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py L1414
+Traceback (most recent call last):
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask_openapi3\scaffold.py", line 127, in view_func
+    response = func(**func_kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\app.py", line 94, in get_produto
+    produto_id = query.id
+                 ^^^^^^^^
+AttributeError: 'ProdutoBuscaSchema' object has no attribute 'id'
+[2023-09-18 16:28:26,435] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 16:28:26] "[35m[1mGET /produto?produto=Teste HTTP/1.1[0m" 500 - - call_trace=C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 16:28:27,089] ERROR log_exception() L1414 Exception on /produto [GET] - call_trace=C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py L1414
+Traceback (most recent call last):
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask_openapi3\scaffold.py", line 127, in view_func
+    response = func(**func_kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\app.py", line 94, in get_produto
+    produto_id = query.id
+                 ^^^^^^^^
+AttributeError: 'ProdutoBuscaSchema' object has no attribute 'id'
+[2023-09-18 16:28:27,094] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 16:28:27] "[35m[1mGET /produto?produto=Teste HTTP/1.1[0m" 500 - - call_trace=C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\werkzeug\_internal.py L187 
+[2023-09-18 16:28:28,066] ERROR log_exception() L1414 Exception on /produto [GET] - call_trace=C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py L1414
+Traceback (most recent call last):
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\flask_openapi3\scaffold.py", line 127, in view_func
+    response = func(**func_kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\app.py", line 94, in get_produto
+    produto_id = query.id
+                 ^^^^^^^^
+AttributeError: 'ProdutoBuscaSchema' object has no attribute 'id'
+[2023-09-18 16:28:28,074] INFO _log() L187  127.0.0.1 - - [18/Sep/2023 16:28:28] "[35m[1mGET /produto?produto=Teste HTTP/1.1[0m" 500 - - call_trace=C:\Users\raini\Desktop\PUCRJ\Desenvolvimento Fullstack Básico\MVP API\env\Lib\site-packages\werkzeug\_internal.py L187 
